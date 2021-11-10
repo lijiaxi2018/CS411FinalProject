@@ -21,12 +21,14 @@ function App() {
   const [defending, setdefending] = useState('');
 
   // Done: Insert/Update a player's information
-  const insertPlayer = (
+  const modifyPlayer = (
       pID,
       pAttr,
       pName,
       teamID,
       pPos,
+      pHeight,
+      pWeight,
       overall,
       insideScore,
       outsideScore,
@@ -35,7 +37,7 @@ function App() {
       rebounding,
       defending
     ) => {
-    Axios.post(`http://localhost:3002/api/insert/player`, {
+    Axios.post(`http://localhost:3002/api/modify/player`, {
         pID: pID,
         pAttr: pAttr,
         pName: pName,
@@ -55,7 +57,9 @@ function App() {
 
   // Done: Delete a player from the DataBase
   const deletePlayer = (pID) => {
-    Axios.delete(`http://localhost:3002/api/delete/${pID}`);
+    Axios.put("http://localhost:3002/api/update/remove_player", {
+      pID: pID,
+    });
   };
 
 
@@ -106,6 +110,16 @@ function App() {
           setpPos(e.target.value)
           console.log(pPos)
         }}/>
+        <label> pHeight</label>
+        <input type="text" name="pHeight" onChange={(e) => {
+          setpHeight(e.target.value)
+          console.log(pHeight)
+        }} />
+        <label> pWeight</label>
+        <input type="text" name="pWeight" onChange={(e) => {
+          setpWeight(e.target.value)
+          console.log(pWeight)
+        }} />
         <label> Overall</label>
         <input type="text" name="overall" onChange={(e) => {
           setoverall(e.target.value)
@@ -149,10 +163,12 @@ function App() {
         <button onClick={() => {
           console.log(
             pID,
-            pName,
             pAttr,
+            pName,
             teamID,
             pPos,
+            pHeight,
+            pWeight,
             overall,
             insideScore,
             outsideScore,
@@ -161,12 +177,14 @@ function App() {
             rebounding,
             defending
           )
-          insertPlayer(
+          modifyPlayer(
             pID,
-            pName,
             pAttr,
+            pName,
             teamID,
             pPos,
+            pHeight,
+            pWeight,
             overall,
             insideScore,
             outsideScore,
@@ -206,7 +224,7 @@ function App() {
             <p>PlayMaking <br /> {player.playMaking}</p>
             <p>Rebounding <br /> {player.rebounding}</p>
             <p>Defending <br /> {player.defending}</p>
-            <button onClick={() => { deletePlayer(player.pID) }}> Delete</button>
+            <button onClick={() => { deletePlayer(player.pID); window.location.reload(); }}> Delete</button>
             </div>
         </div>
       )}

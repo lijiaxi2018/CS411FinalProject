@@ -29,8 +29,8 @@ function App() {
   useEffect(() => {
     Axios.get(`http://localhost:3002/api/get/username/${userID}`)
     .then((response) => {
-      console.log(response.data[0].teamName)
-      setTeamName(response.data[0].teamName)
+      console.log(response.data[0].uteamName)
+      setTeamName(response.data[0].uteamName)
     })
   },[])
 
@@ -61,7 +61,7 @@ function App() {
               <p>PlayMaking <br /> {player.playMaking}</p>
               <p>Rebounding <br /> {player.rebounding}</p>
               <p>Defending <br /> {player.defending}</p>
-              <button onClick={() => { removePlayerFromTeam(userID, player.pID) }}> Remove from Team</button>
+              <button onClick={() => { removePlayerFromTeam(userID, player.pID); window.location.reload(); }}> Remove from Team</button>
             </div>
           </div>
         )}

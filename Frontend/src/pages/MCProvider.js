@@ -31,8 +31,27 @@ function App() {
     });
   };
 
+  const adv1 = (userID) => {
+    Axios.put(`http://localhost:3002/api/adv1`, {
+      userID: userID,
+    });
+  };
+
+  const adv2 = (teamNameLike, arenaNameLike) => {
+    Axios.put(`http://localhost:3002/api/adv2`, {
+      teamNameLike: 'B', 
+      arenaNameLike: 'A',
+    });
+  };
+
   return (
+
     <div className="App">
+
+      <button onClick={() => { adv1(); window.location.reload(); }}> Advanced Query 1</button>
+      <br/>
+      <button onClick={() => { adv2(); window.location.reload(); }}> Advanced Query 2</button>
+
       <h1 className='player-text'>Current Mdeicine Provider</h1>
       <div className = "card">
         <p>MCProvider ID <br /> {currMCProvider.mcID}</p>
