@@ -45,5 +45,11 @@ export const SidebarData = [
     path: '/Customized_players',
     icon: <IoIcons.IoIosHappy />,
     cName: 'nav-text'
+  },
+  {
+    title: 'Advanced_Query',
+    path: '/Advanced_Query',
+    icon: <IoIcons.IoIosSearch />,
+    cName: 'nav-text'
   }
 ];

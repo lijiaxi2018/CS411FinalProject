@@ -10,6 +10,7 @@ import MyTeam from './pages/MyTeam';
 import Customized from './pages/Customized';
 import Investigator from './pages/Investigator';
 import MCProvider from './pages/MCProvider';
+import AdvancedQuery from './pages/AdvancedQuery';
 import Page from './pages/Page';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/MC_Provider' element={<MCProvider/>} />
           <Route path='/Stadium' element={<Page/>} />
           <Route path='/Customized_players' element={<Customized/>} />
+          <Route path='/Advanced_Query' element={<AdvancedQuery/>} />
         </Routes>
       </Router>
     </>

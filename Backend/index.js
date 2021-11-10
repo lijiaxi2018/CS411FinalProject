@@ -8,8 +8,8 @@ const cors = require("cors");
 var db = mysql.createConnection({
     host:'localhost',
     user: 'root',
-    password:'123456',
-    database:'411pt1',
+    password:'Jiaxili2018!',
+    database:'project411',
 })
 
 app.use(cors());
@@ -129,7 +129,7 @@ app.put("/api/update/mcprovider", (require, response) => {
     })
 });
 
-app.get("/api/adv1", (require, response) => {
+app.get("/api/get/adv1/", (require, response) => {
     // the returning reuslt of this query is: teamName, MCFee.
     const sql = `select Teams.teamName as teamName,count(pID)*MCProviders.feePerPlayer as MCFee from MCProviders natural join Teams natural join Players where Players.teamID < 31 group by Players.teamID having avg(overall) >= 60 order by MCFee DESC`;
     db.query(sql, (err, result) => {
@@ -137,7 +137,7 @@ app.get("/api/adv1", (require, response) => {
     })
 });
 
-app.get("/api/adv2", (require, response) => {
+app.get("/api/get/adv2", (require, response) => {
     const teamNameLike = require.body.teamNameLike;
     const arenaNameLike = require.body.arenaNameLike;
     // the returning reuslt of this query is: arOpenYear, capacityBuilt
