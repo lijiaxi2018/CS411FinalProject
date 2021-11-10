@@ -29,8 +29,8 @@ function App() {
   const adv1 = () => {
     Axios.get(`http://localhost:3002/api/get/adv1/`)
       .then((response) => {
-        console.log(response.data)
         setQueryResult1(response.data)
+        console.log()
       });
   };
 

@@ -52,10 +52,7 @@ create table Users (
     email varchar (765),
     pcode varchar (765)
 );
-INSERT INTO
-  `Users` (`uID`, `uName`, `uteamName`, `email`, `pcode`)
-VALUES
-  ('1', 'default', 'default_team', 'email', 'password');
+
 
 create table UserTeams (
   uID int (11) REFERENCES Users(uID) on delete CASCADE,
@@ -63,4 +60,4 @@ create table UserTeams (
   PRIMARY KEY (uID, pID)
 );
 
-insert into UserTeams values (1, 1);
+

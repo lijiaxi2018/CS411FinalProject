@@ -9,7 +9,7 @@ var db = mysql.createConnection({
     host:'localhost',
     user: 'root',
     password:'123456',
-    database:'411pt1',
+    database:'411db1',
 })
 
 app.use(cors());
