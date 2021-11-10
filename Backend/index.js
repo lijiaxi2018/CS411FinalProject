@@ -8,8 +8,8 @@ const cors = require("cors");
 var db = mysql.createConnection({
     host:'localhost',
     user: 'root',
-    password:'Jiaxili2018!',
-    database:'project411',
+    password:'123456',
+    database:'411pt1',
 })
 
 app.use(cors());
@@ -55,8 +55,9 @@ app.get("/api/get/username/:userID", (require, response) => {
 // TODO: Remove a player from the team
 app.put("/api/update/remove_player", (require, response) => {
     const pID = require.body.pID;
-    var sqlDelete = "DELETE FROM Players WHERE pID = ?";
-    db.query(sqlDelete, [pID], (err, result) => {
+    const uID = require.body.userID;
+    var sqlDelete = "DELETE FROM UserTeams WHERE pID = ? and uID = ?";
+    db.query(sqlDelete, [pID, uID], (err, result) => {
         if (err)
             console.log(error);
     })
@@ -137,13 +138,15 @@ app.get("/api/get/adv1/", (require, response) => {
     })
 });
 
-app.get("/api/get/adv2", (require, response) => {
-    const teamNameLike = require.body.teamNameLike;
-    const arenaNameLike = require.body.arenaNameLike;
+app.get("/api/get/adv2/:teamNameLike/:arenaNameLike", (require, response) => {
+    const teamNameLike = require.params.teamNameLike;
+    const arenaNameLike = require.params.arenaNameLike;
     // the returning reuslt of this query is: arOpenYear, capacityBuilt
-    var sql = `(SELECT arOpenYear, AVG(arCapacity) as capacityBuilt FROM Teams NATURAL JOIN Arenas WHERE teamName LIKE "%?%" GROUP BY arOpenYear ORDER BY arOpenYear DESC ) UNION (SELECT arOpenYear, AVG(arCapacity) as capacityBuilt FROM Teams NATURAL JOIN Arenas WHERE arName LIKE "%?%" GROUP BY arOpenYear ORDER BY arOpenYear DESC )`;
-    db.query(sql, [teamNameLike, arenaNameLike], (err, result) => {
+    const sql = '(SELECT arOpenYear, AVG(arCapacity) as capacityBuilt FROM Teams NATURAL JOIN Arenas WHERE teamName LIKE "%'+teamNameLike+'%" GROUP BY arOpenYear ORDER BY arOpenYear DESC ) UNION (SELECT arOpenYear, AVG(arCapacity) as capacityBuilt FROM Teams NATURAL JOIN Arenas WHERE arName LIKE "%'+arenaNameLike+'%" GROUP BY arOpenYear ORDER BY arOpenYear DESC )';
+    db.query(sql, (err, result) => {
         response.send(result);
+        if (err)
+            console.log(error);
     })
 });
 

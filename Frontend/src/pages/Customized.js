@@ -192,7 +192,7 @@ function App() {
             playMaking,
             rebounding,
             defending
-          )
+          ); window.location.reload();
         }}> Modify</button>
       </div>
 
