@@ -152,7 +152,7 @@ const AddForm = () =>{
                         setpAttr(e.target.value)
                         console.log({pAttr})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -165,7 +165,7 @@ const AddForm = () =>{
                         setpName(e.target.value)
                         console.log({pName})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -178,7 +178,7 @@ const AddForm = () =>{
                         setteamID(e.target.value)
                         console.log({teamID})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -191,7 +191,7 @@ const AddForm = () =>{
                         setpPos(e.target.value)
                         console.log({teamID})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -204,7 +204,7 @@ const AddForm = () =>{
                         setpHeight(e.target.value)
                         console.log({pHeight})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -217,7 +217,7 @@ const AddForm = () =>{
                         setpWeight(e.target.value)
                         console.log({pWeight})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -230,7 +230,7 @@ const AddForm = () =>{
                         setoverall(e.target.value)
                         console.log({overall})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -243,7 +243,7 @@ const AddForm = () =>{
                         setinsideScore(e.target.value)
                         console.log({insideScore})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -256,7 +256,7 @@ const AddForm = () =>{
                         setoutsideScore(e.target.value)
                         console.log({outsideScore})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -269,7 +269,7 @@ const AddForm = () =>{
                         setathleticism(e.target.value)
                         console.log({athleticism})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -282,7 +282,7 @@ const AddForm = () =>{
                         setplayMaking(e.target.value)
                         console.log({playMaking})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -295,7 +295,7 @@ const AddForm = () =>{
                         setrebounding(e.target.value)
                         console.log({rebounding})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Form.Group>
@@ -308,7 +308,7 @@ const AddForm = () =>{
                         setdefending(e.target.value)
                         console.log({defending})
                     }}
-                    required
+                    
                 />
             </Form.Group>
             <Button variant="success" type="submit" block>
