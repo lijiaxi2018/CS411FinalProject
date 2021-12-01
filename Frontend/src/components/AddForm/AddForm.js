@@ -145,7 +145,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="pAttr *"
+                    placeholder="pAttr"
                     name="pAttr"
                     value={pAttr}
                     onChange = {(e) => {
@@ -158,7 +158,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="pName *"
+                    placeholder="pName"
                     name="pName"
                     value={pName}
                     onChange = {(e) => {
@@ -171,7 +171,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="teamID *"
+                    placeholder="teamID"
                     name="teamID"
                     value={teamID}
                     onChange = {(e) => {
@@ -184,7 +184,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="pPos *"
+                    placeholder="pPos"
                     name="pPos"
                     value={pPos}
                     onChange = {(e) => {
@@ -197,7 +197,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="pHeight *"
+                    placeholder="pHeight"
                     name="pHeight"
                     value={pHeight}
                     onChange = {(e) => {
@@ -210,7 +210,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="pWeight *"
+                    placeholder="pWeight"
                     name="pWeight"
                     value={pWeight}
                     onChange = {(e) => {
@@ -223,7 +223,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="overall *"
+                    placeholder="overall"
                     name="overall"
                     value={overall}
                     onChange = {(e) => {
@@ -236,7 +236,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="insideScore *"
+                    placeholder="insideScore"
                     name="insideScore"
                     value={insideScore}
                     onChange = {(e) => {
@@ -249,7 +249,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="outsideScore *"
+                    placeholder="outsideScore"
                     name="outsideScore"
                     value={outsideScore}
                     onChange = {(e) => {
@@ -262,7 +262,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="athleticism *"
+                    placeholder="athleticism"
                     name="athleticism"
                     value={athleticism}
                     onChange = {(e) => {
@@ -275,7 +275,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="playMaking *"
+                    placeholder="playMaking"
                     name="playMaking"
                     value={playMaking}
                     onChange = {(e) => {
@@ -288,7 +288,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="rebounding *"
+                    placeholder="rebounding"
                     name="rebounding"
                     value={rebounding}
                     onChange = {(e) => {
@@ -301,7 +301,7 @@ const AddForm = () =>{
             <Form.Group>
                 <Form.Control
                     type="text"
-                    placeholder="defending *"
+                    placeholder="defending"
                     name="defending"
                     value={defending}
                     onChange = {(e) => {
