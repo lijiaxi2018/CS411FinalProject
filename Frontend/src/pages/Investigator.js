@@ -38,7 +38,7 @@ function App() {
       {newPlayers.map(player =>
         <div
           key={player.pID}> 
-          <div className = "card">
+          <div className = "card1">
             <p>Name <br /> {player.pName}</p>
             <p>Player_ID <br /> {player.pID}</p>
             <p>Season <br /> {player.pAttr}</p>

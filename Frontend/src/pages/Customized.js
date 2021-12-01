@@ -7,7 +7,7 @@ import AddForm from '../components/AddForm/AddForm.js';
 import Pagination from '../components/Pagination/Pagination.js';
 import * as FaIcons from 'react-icons/ri';
 import * as AiIcons from 'react-icons/ai';
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App() {

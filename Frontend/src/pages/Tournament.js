@@ -25,7 +25,7 @@ function App() {
       {allTournaments.map(tournament =>
         <div
           key={tournament.team_name}> 
-          <div className = "card">
+          <div className = "card1">
             <p>Team ID <br /> {tournament.team_id}</p>
             <p>Team Name <br /> {tournament.team_name}</p>
             <p>Score <br /> {tournament.cnt}</p>
@@ -37,7 +37,7 @@ function App() {
       {allMatches.map(matches =>
         <div
           key={matches.match_id}>
-          <div className="card">
+          <div className="card1">
             <p>Match ID <br /> {matches.match_id}</p>
             <p>Home Team <br /> {matches.team1}</p>
             <p>Away Team <br /> {matches.team2}</p>
