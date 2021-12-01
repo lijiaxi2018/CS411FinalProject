@@ -2,11 +2,12 @@ import React, {useState, useEffect} from "react";
 import Axios from 'axios';
 import './Pages.css';
 // Addition for Stage 5 
-import { Modal, Button, Alert} from 'react-bootstrap';
+import { Modal, Button, Alert } from 'react-bootstrap';
 import AddForm from '../components/AddForm/AddForm.js';
 import Pagination from '../components/Pagination/Pagination.js';
 import * as FaIcons from 'react-icons/ri';
 import * as AiIcons from 'react-icons/ai';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App() {
@@ -70,10 +71,10 @@ function App() {
     <div className="App">
       <div className="table-title">
           <div className="row">
-              <div className="col-sm-6">
+              <div>
                   <h1>Player <b>Modification</b></h1> 
               </div>
-              <div className="col-sm-6">
+              <div>
                   <Button onClick={handleShow} className="btn btn-act" data-toggle="modal"><AiIcons.AiFillEdit /><span>Player Modification</span></Button>					
               </div>
           </div>
