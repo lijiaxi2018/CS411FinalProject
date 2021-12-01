@@ -6,10 +6,10 @@ const cors = require("cors");
 
 // Connect to the DataBase
 var db = mysql.createConnection({
-    host:'localhost',
-    user: 'root',
-    password:'123456',
-    database:'411db1',
+    host:'127.0.0.1',
+    user: 'david',
+    password:'00123099',
+    database:'2k',
 })
 
 app.use(cors());
