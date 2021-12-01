@@ -11,6 +11,10 @@
 
 Copy and Paste tigger.txt and stored_procedure.txt to terminal
 
+# Recommendation System
+
+Copy and Paste recommendation.txt to terminal
+
 # Drop all Tables:
 
 1. drop_tables.sql
