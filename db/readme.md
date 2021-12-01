@@ -7,6 +7,10 @@
 5. insert_mcproviders.sql
 6. insert_user.sql
 
+# Trigger and Stored Procedure
+
+Copy and Paste tigger.txt and stored_procedure.txt to terminal
+
 # Drop all Tables:
 
 1. drop_tables.sql

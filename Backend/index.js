@@ -20,9 +20,9 @@ app.use(express.json());
 app.get("/api/get", (require, response) => {
     const sqlSelect = "SELECT * FROM Players";
     db.query(sqlSelect, function (err, result, fields) {
+        //console.log(result);
         response.send(result);
         if (err) throw err;
-        //console.log(result);
     });
 });
 
@@ -41,6 +41,7 @@ app.get("/api/get/user/:userID", (require, response) => {
     const sqlSelect = "SELECT * FROM Users natural join UserTeams natural join Players WHERE uID = " + require.params.userID;
     db.query(sqlSelect, (err, result) => {
         response.send(result);
+        console.log(result);
     });
 });
 
@@ -68,6 +69,13 @@ app.get("/api/get/investigator/:userID", (require, response) => {
     const sqlSelect = "TODO;";
     db.query(sqlSelect, (err, result) => {
         response.send(result);
+    });
+});
+
+app.get("/api/get/tournament/", (require, response) => {
+    db.query("call f", function (err, result, fields) {
+        response.send(result);
+        console.log(result);
     });
 });
 
@@ -121,6 +129,7 @@ app.get("/api/get/mcprovider/:userID", (require, response) => {
     const sqlSelect = "SELECT * FROM MCProviders";
     db.query(sqlSelect, (err, result) => {
         response.send(result);
+        //console.log(result);
     });
 });
 
