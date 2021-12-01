@@ -12,6 +12,7 @@ import Investigator from './pages/Investigator';
 import MCProvider from './pages/MCProvider';
 import AdvancedQuery from './pages/AdvancedQuery';
 import Page from './pages/Page';
+import Tournament from './pages/Tournament';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/My_Team' element={<MyTeam/>} />
-          <Route path='/Tournament' element={<Page/>} />
+          <Route path='/Tournament' element={<Tournament/>} />
           <Route path='/Investigator' element={<Investigator/>} />
           <Route path='/MC_Provider' element={<MCProvider/>} />
           <Route path='/Stadium' element={<Page/>} />
