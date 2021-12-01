@@ -65,10 +65,10 @@ app.put("/api/update/remove_player", (require, response) => {
 });
 
 // TODO: Generate a set of potential players for the user's team
-app.get("/api/get/investigator/:userID", (require, response) => {
-    const sqlSelect = "TODO;";
-    db.query(sqlSelect, (err, result) => {
+app.get("/api/get/investigator/", (require, response) => {
+    db.query("call cf", (err, result) => {
         response.send(result);
+        console.log(result);
     });
 });
 

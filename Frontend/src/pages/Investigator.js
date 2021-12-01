@@ -25,10 +25,10 @@ function App() {
 
   // DONE: Get a set of potential players for the user's team
   const generatePlayers = (userID) => {
-    Axios.get(`http://localhost:3002/api/get/investigator/${userID}`)
+    Axios.get(`http://localhost:3002/api/get/investigator/`)
     .then((response) => {
-      console.log(response.data)
-      setNewPlayers(response.data)
+      //console.log(response.data)
+      setNewPlayers(response.data[0])
     })
   };
 
