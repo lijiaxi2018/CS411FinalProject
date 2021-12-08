@@ -4,4 +4,4 @@
 
 In the Backend directory, you can run:
 
-### `npm start`
+### `npm run devStart`

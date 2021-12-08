@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Axios from 'axios';
 import './Pages.css';
+import * as AiIcons from 'react-icons/ai';
 
 function App() {
   const [userID, setUserID] = useState(1);
@@ -61,7 +62,7 @@ function App() {
             <p>PlayMaking <br /> {player.playMaking}</p>
             <p>Rebounding <br /> {player.rebounding}</p>
             <p>Defending <br /> {player.defending}</p>
-            <button onClick={() => { addPlayerToTeam(userID, player.pID) }}> Add to Team</button>
+            <button onClick={() => { addPlayerToTeam(userID, player.pID) }}className="btn btn-act" data-toggle="modal"><AiIcons.AiOutlinePlusCircle /> </button>
             </div>
         </div>
       )}
