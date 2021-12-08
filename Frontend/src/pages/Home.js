@@ -62,8 +62,13 @@ function App() {
             <p>PlayMaking <br /> {player.playMaking}</p>
             <p>Rebounding <br /> {player.rebounding}</p>
             <p>Defending <br /> {player.defending}</p>
+<<<<<<< HEAD
             <button onClick={() => { addPlayerToTeam(userID, player.pID) }} className="btn btn-act" data-toggle="modal"><AiIcons.AiOutlinePlusCircle /> </button>
           </div>
+=======
+            <button onClick={() => { addPlayerToTeam(userID, player.pID) }}className="btn btn-act" data-toggle="modal"><AiIcons.AiOutlinePlusCircle /> </button>
+            </div>
+>>>>>>> 9236a6d374f2c7120f5f8b20ab607eb3ef84160e
         </div>
       )}
     </div>

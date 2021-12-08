@@ -46,6 +46,7 @@ function App() {
   return (
     <div className="App">
       <h1>Team: {teamName} </h1>
+<<<<<<< HEAD
       {allPlayers.map(player =>
         <div
           key={player.pID}>
@@ -66,6 +67,28 @@ function App() {
           </div>
         </div>
       )}
+=======
+        {allPlayers.map(player =>
+          <div
+            key={player.pID}> 
+            <div className = "card1">
+              <p>Name <br /> {player.pName}</p>
+              <p>Player_ID <br /> {player.pID}</p>
+              <p>Season <br /> {player.pAttr}</p>
+              <p>TeamID <br /> {player.teamID}</p>
+              <p>Position <br /> {player.pPos}</p>
+              <p>Overall <br /> {player.overall}</p>
+              <p>InsideScore <br /> {player.insideScore}</p>
+              <p>OutsideScore <br /> {player.outsideScore}</p>
+              <p>Athleticism <br /> {player.athleticism}</p>
+              <p>PlayMaking <br /> {player.playMaking}</p>
+              <p>Rebounding <br /> {player.rebounding}</p>
+              <p>Defending <br /> {player.defending}</p>
+              <button onClick={() => { removePlayerFromTeam(userID, player.pID); window.location.reload(); }}className="btn btn-act" data-toggle="modal"><AiIcons.AiOutlineMinusCircle /></button>
+            </div>
+          </div>
+        )}
+>>>>>>> 9236a6d374f2c7120f5f8b20ab607eb3ef84160e
     </div>
 
   );
