@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Axios from 'axios';
 import './Pages.css';
+import * as AiIcons from 'react-icons/ai';
 
 function App() {
   const [userID, setUserID] = useState(1);
@@ -8,12 +9,12 @@ function App() {
   const [playersList, setPlayersList] = useState([]);
   useEffect(() => {
     Axios.get(`http://localhost:3002/api/get`)
-    .then((response) => {
-      console.log(response.data)
-      setPlayersList(response.data)
-    })
-  },[])
-  
+      .then((response) => {
+        console.log(response.data)
+        setPlayersList(response.data)
+      })
+  }, [])
+
   const [search, setSearch] = useState('');
   const handleChange = e => {
     setSearch(e.target.value);
@@ -22,8 +23,8 @@ function App() {
   // TODO: Add a new player to the team
   const addPlayerToTeam = (userID, pID) => {
     Axios.put(`http://localhost:3002/api/update/add_player`, {
-        userID: userID,
-        pID: pID,
+      userID: userID,
+      pID: pID,
     });
   };
 
@@ -47,8 +48,8 @@ function App() {
 
       {filteredPlayers.map(player =>
         <div
-          key={player.pID}> 
-          <div className = "card1">
+          key={player.pID}>
+          <div className="card1">
             <p> Name <br /> {player.pName}</p>
             <p>Player_ID <br /> {player.pID}</p>
             <p>Season <br /> {player.pAttr}</p>
@@ -61,8 +62,8 @@ function App() {
             <p>PlayMaking <br /> {player.playMaking}</p>
             <p>Rebounding <br /> {player.rebounding}</p>
             <p>Defending <br /> {player.defending}</p>
-            <button onClick={() => { addPlayerToTeam(userID, player.pID) }}> Add to Team</button>
-            </div>
+            <button onClick={() => { addPlayerToTeam(userID, player.pID) }} className="btn btn-act" data-toggle="modal"><AiIcons.AiOutlinePlusCircle /> </button>
+          </div>
         </div>
       )}
     </div>
